@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:jxb="http://java.sun.com/xml/ns/jaxb"
+           jxb:version="1.0"
+           elementFormDefault="qualified"
+           targetNamespace="http://schemas.example.com/lt-xml"
+           xmlns:this="http://schemas.example.com/lt-xml">
+
+    <xs:complexType name="AbstractBaseType">
+        <xs:sequence>
+            <xs:element name="Thingamajiggy" type="xs:string" minOccurs="0"/>
+            <xs:element name="Timestamp" type="xs:long"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:element name="SimpleType">
+        <xs:complexType>
+            <xs:complexContent>
+                <xs:extension base="this:AbstractBaseType">
+                    <xs:sequence>
+                        <xs:element name="ANumber" type="xs:long"/>
+                        <xs:element name="AString" type="xs:string"/>
+                    </xs:sequence>
+                </xs:extension>
+            </xs:complexContent>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="AllDataTypes">
+        <xs:complexType>
+            <xs:complexContent>
+                <xs:extension base="this:AbstractBaseType">
+                    <xs:sequence>
+                        <xs:element name="PrimitiveInt" type="xs:int" minOccurs="1"/>
+                        <xs:element name="PrimitiveLong" type="xs:long" minOccurs="1"/>
+                        <xs:element name="PrimitiveBoolean" type="xs:boolean" minOccurs="1"/>
+                        <xs:element name="ObjectInteger" type="xs:int" minOccurs="0"/>
+                        <xs:element name="ObjectLong" type="xs:long" minOccurs="0"/>
+                        <xs:element name="ObjectBoolean" type="xs:boolean" minOccurs="0"/>
+                        <xs:element name="ObjectString" type="xs:string"/>
+                        <xs:element name="ObjectBigDecimal" type="xs:decimal"/>
+                        <xs:element name="ObjectDate" type="xs:date"/>
+                    </xs:sequence>
+                </xs:extension>
+            </xs:complexContent>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:simpleType name="AnEnumType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="ChoiceA"/>
+            <xs:enumeration value="ChoiceB"/>
+            <xs:enumeration value="ChoiceC"/>
+            <xs:enumeration value="ChoiceD"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:element name="ATypeWithEnumField">
+        <xs:complexType>
+            <xs:complexContent>
+                <xs:extension base="this:AbstractBaseType">
+                    <xs:sequence>
+                        <xs:element name="Status" type="this:AnEnumType"/>
+                    </xs:sequence>
+                </xs:extension>
+            </xs:complexContent>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="SubType">
+        <xs:complexContent>
+            <xs:extension base="this:AbstractBaseType">
+                <xs:sequence>
+                    <xs:element name="SubField" type="xs:string" minOccurs="0"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:element name="ATypeWithComplexField">
+        <xs:complexType>
+            <xs:complexContent>
+                <xs:extension base="this:AbstractBaseType">
+                    <xs:sequence>
+                        <xs:element name="TypeField" type="this:SubType"/>
+                    </xs:sequence>
+                </xs:extension>
+            </xs:complexContent>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="AllDataTypesList">
+        <xs:complexType>
+            <xs:complexContent>
+                <xs:extension base="this:AbstractBaseType">
+                    <xs:sequence>
+                        <xs:element name="ObjectInteger" type="xs:int" maxOccurs="unbounded"/>
+                        <xs:element name="ObjectLong" type="xs:long" maxOccurs="unbounded"/>
+                        <xs:element name="ObjectBoolean" type="xs:boolean" maxOccurs="unbounded"/>
+                        <xs:element name="ObjectString" type="xs:string" maxOccurs="unbounded"/>
+                        <xs:element name="ObjectBigDecimal" type="xs:decimal" maxOccurs="unbounded"/>
+                        <xs:element name="ObjectDate" type="xs:date" maxOccurs="unbounded"/>
+                        <xs:element name="ObjectComplexType" type="this:PairOfStrings" maxOccurs="unbounded"/>
+                    </xs:sequence>
+                </xs:extension>
+            </xs:complexContent>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="EmptyMiddleType">
+        <xs:complexContent>
+            <xs:extension base="this:AbstractBaseType"/>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:element name="DerivedType">
+        <xs:complexType>
+            <xs:complexContent>
+                <xs:extension base="this:EmptyMiddleType">
+                    <xs:sequence>
+                        <xs:element name="Status" type="this:AnEnumType"/>
+                        <xs:element name="Description" type="xs:string"/>
+                    </xs:sequence>
+                </xs:extension>
+            </xs:complexContent>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="PairOfStrings">
+        <xs:sequence>
+            <xs:element name="s1" type="xs:string"/>
+            <xs:element name="s2" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+    
+    <xs:complexType name="CapitalizationTest">
+        <xs:sequence>
+            <xs:element name="STUDLYCaps" type="xs:string" minOccurs="0"/>
+            <xs:element name="RUN2ANumber" type="xs:string" minOccurs="0"/>
+            <xs:element name="TLAFooSQLStumpy" type="xs:string" minOccurs="0"/>
+            <xs:element name="lowercase" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>
