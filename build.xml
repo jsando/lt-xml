@@ -1,0 +1,85 @@
+<project name="lt-xml" default="build">
+    
+    <taskdef name="xjc" classname="com.sun.tools.xjc.XJCTask">
+        <classpath>
+            <fileset dir="lib/build" includes="jaxb-*.jar" />
+        </classpath>
+    </taskdef>
+    
+    <target name="clean">
+        <delete dir="build"/>
+    </target>
+
+    <target name="build">
+        <mkdir dir="build/classes"/>
+        <javac source = "1.5" target = "1.5" srcdir="src" destdir="build/classes" optimize="true" debug="true">
+            <classpath>
+                <fileset dir="lib/runtime" includes="*.jar"/>
+            </classpath>
+        </javac>
+        <jar jarfile="build/lt-xml.jar" basedir="build/classes"/>
+    </target>
+    
+    <target name="test-schema">
+        <delete dir="build/test-schema"/>
+        <mkdir dir="build/test-schema/gen-src"/>
+        <mkdir dir="build/test-schema/classes"/>
+        <xjc destdir="build/test-schema/gen-src" extension="true">
+            <schema dir="test" includes="*.xsd"/>
+            <produces dir="build/test-schema/gen-src" includes="**/*.java" />
+        </xjc>
+        <javac source="1.6" target="1.6" debug="on" srcdir="build/test-schema/gen-src" destdir="build/test-schema/classes"/>
+        <jar basedir="build/test-schema/classes" jarfile="build/test-schema.jar"/>
+    </target>
+
+    <target name="build-test" depends="build,test-schema">
+        <mkdir dir="build/testclasses"/>
+        <javac source = "1.5" target = "1.5" srcdir="test" destdir="build/testclasses" optimize="true" debug="true">
+            <classpath>
+                <fileset dir="lib/runtime" includes="*.jar"/>
+                <fileset dir="lib/test" includes="*.jar"/>
+                <path location="build/lt-xml.jar"/>
+                <path location="build/test-schema.jar"/>
+            </classpath>
+        </javac>
+    </target>
+
+    <target name="test" depends="build-test">
+        <property name="junit.temp" value="build/junit"/>
+        <property name="junit.report" value="build/junit-report"/>
+
+        <delete dir="${junit.report}"/>
+        <delete dir="${junit.temp}"/>
+
+        <mkdir dir="build/junit"/>
+        <property name="test" value="*Test"/>
+        <echo message="Running tests based on pattern '${test}' (overridable with -Dtest=)"/>
+
+        <junit showoutput="yes" fork="true" forkmode="once" printsummary="true"
+               haltonfailure="false" errorproperty="junit.result" failureproperty="junit.result">
+            <classpath>
+                <path location="build/testclasses"/>
+                <path location="build/lt-xml.jar"/>
+                <path location="build/test-schema.jar"/>
+                <fileset dir="lib/test" includes="*.jar"/>
+                <fileset dir="lib/runtime" includes="*.jar"/>
+            </classpath>
+            <formatter type="xml"/>
+
+            <batchtest todir="build/junit">
+                <fileset dir="build/testclasses" includes="**/*Test.class"/>
+            </batchtest>
+        </junit>
+
+        <junitreport todir="${junit.temp}">
+            <fileset dir="${junit.temp}">
+                <include name="TEST-*.xml"/>
+            </fileset>
+            <report format="noframes" todir="${junit.report}"/>
+        </junitreport>
+
+        <fail if="junit.result" message="One or more unit tests has failed."/>
+
+    </target>
+
+</project>
