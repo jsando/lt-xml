@@ -97,7 +97,7 @@ public class XmlUtil {
     /*
      * http://a.b.c/d/e --> c.b.a.d.e
      */
-    private String nsToPackage(String ns) throws URISyntaxException, IOException {
+    public static String nsToPackage(String ns) throws URISyntaxException, IOException {
         String pn = null;
         URI uri = new URI(ns);
         if (uri.getScheme().equals("http")) {
@@ -108,17 +108,20 @@ public class XmlUtil {
 
             StringBuilder b = new StringBuilder(ns.length());
             for (int i = parts.length - 1; i >= 0; i--) {
+                if ("www".equals(parts[i])) {
+                    continue;
+                }
                 if (b.length() > 0)
                     b.append('.');
                 b.append(parts[i]);
             }
             if (path != null && path.length() > 0) {
+                path = path.replace('.', '_');
                 path = path.replace('/', '.');
                 b.append(path);
             }
             pn = b.toString();
             pn = pn.replace('-', '_');
-            //System.out.printf("NS '%s' --> package '%s'\n", ns, pn);
         }
         if (pn == null)
             throw new IOException("Unknown package (input namespace: '" + ns + "').");
