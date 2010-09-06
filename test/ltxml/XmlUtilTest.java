@@ -17,13 +17,19 @@ import javax.xml.datatype.DatatypeConfigurationException;
 import javax.xml.datatype.DatatypeFactory;
 import javax.xml.datatype.XMLGregorianCalendar;
 import java.math.BigDecimal;
-import java.util.Date;
 import java.util.GregorianCalendar;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNull;
 
 public class XmlUtilTest {
+
+    @Test
+    public void testNsToPackage () throws Exception {
+        assertEquals("com.example.schemas.lt_xml", XmlUtil.nsToPackage("http://schemas.example.com/lt-xml"));
+        //http://www.gamingstandards.com/s2s/schemas/v1.2.6 -- > com.gamingstandards.s2s.schemas.v1_2
+        assertEquals("com.example.a.b.v1_2_3", XmlUtil.nsToPackage("http://www.example.com/a/b/v1.2.3"));
+    }
 
     @Test
     public void testWrite () throws Exception {
