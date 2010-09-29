@@ -276,9 +276,10 @@ public class XmlUtil {
                 claz = claz.getSuperclass();
             }
         } while (field == null && !claz.equals(Object.class));
-        if (field == null)
-            System.err.printf("WARNING: Field not found for XML tag (%s.%s)\n", bean.getClass().getSimpleName(), property);
+        if (field == null) {
+//            System.err.printf("WARNING: Field not found for XML tag (%s.%s)\n", bean.getClass().getSimpleName(), property);
 //            throw new NoSuchFieldException(bean.getClass().getName() + "." + property);
+        }
         return field;
     }
 
@@ -411,7 +412,7 @@ public class XmlUtil {
     }
 
     public static Object unmarshall(byte[] bytes, int offset, int length, boolean soap) throws Exception {
-        String s = new String(bytes, offset, length, UTF_8);
+//        String s = new String(bytes, offset, length, UTF_8);
 //        System.out.printf("Parsing XML: %s\n", s);
         return new XmlUtil(soap).parse(new InputStreamReader(new ByteArrayInputStream(bytes, offset, length), UTF_8));
     }
