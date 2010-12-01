@@ -337,19 +337,16 @@ public class XmlUtil {
         } else if (type.equals(Integer.TYPE)) {
             xmlValue = value;
         } else if (type.equals(BigDecimal.class)) {
-            xmlValue = value;
+            xmlValue = ((BigDecimal) value).toPlainString();
         } else if (type.equals(Boolean.class) || type.equals(Boolean.TYPE)) {
             xmlValue = value;
         } else if (XMLGregorianCalendar.class.isAssignableFrom(type)) {
             xmlValue = value;
         } else if (type.isEnum()) {
-            if (value != null) {
-                Method valueMethod = type.getDeclaredMethod("value", new Class[]{});
-                xmlValue = valueMethod.invoke(value);
-            }
+            Method valueMethod = type.getDeclaredMethod("value", new Class[]{});
+            xmlValue = valueMethod.invoke(value);
         } else {
-            if (value != null)
-                writeObject(value, value.getClass(), null, xml);
+            writeObject(value, value.getClass(), null, xml);
         }
 
         if (xmlValue != null)
