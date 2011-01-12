@@ -13,6 +13,10 @@
         </xs:sequence>
     </xs:complexType>
 
+    <xs:simpleType name="StringAlias">
+        <xs:restriction base="xs:string"/>
+    </xs:simpleType>
+
     <xs:element name="SimpleType">
         <xs:complexType>
             <xs:complexContent>
@@ -141,4 +145,20 @@
             <xs:element name="lowercase" type="xs:string" minOccurs="0"/>
         </xs:sequence>
     </xs:complexType>
+
+    <xs:element name="ListItems">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element minOccurs="0" maxOccurs="unbounded" name="StringAlias">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element minOccurs="0" maxOccurs="1" name="Field1" type="xs:long"/>
+                            <xs:element minOccurs="1" maxOccurs="1" name="StringAlias" type="this:StringAlias"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
 </xs:schema>

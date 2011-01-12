@@ -8,6 +8,7 @@ import com.example.schemas.lt_xml.AllDataTypesList;
 import com.example.schemas.lt_xml.AnEnumType;
 import com.example.schemas.lt_xml.CapitalizationTest;
 import com.example.schemas.lt_xml.DerivedType;
+import com.example.schemas.lt_xml.ListItems;
 import com.example.schemas.lt_xml.PairOfStrings;
 import com.example.schemas.lt_xml.SimpleType;
 import com.example.schemas.lt_xml.SubType;
@@ -298,6 +299,15 @@ public class XmlUtilTest {
         lazyVerify(obj);
     }
 
+    @Test
+    public void testListAgain () throws Exception {
+        ListItems obj = new ListItems();
+        ListItems.StringAlias item = new ListItems.StringAlias();
+        item.setField1(12345l);
+        item.setStringAlias("12345");
+        obj.getStringAlias().add(item);
+        lazyVerify (obj);
+    }
     //--------------------------------------------------------------------------------------------------------- Internal
 
     private void lazyVerify(Object obj) throws Exception {

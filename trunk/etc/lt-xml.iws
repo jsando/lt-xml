@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" readonly="true" id="1863f152-9598-4fea-8bca-0ade4c29a0b0" name="Default" comment="" />
+    <list default="true" id="1863f152-9598-4fea-8bca-0ade4c29a0b0" name="Default" comment="" />
     <ignored path="$USER_HOME_GRIFFON$/" />
     <ignored path="$USER_HOME_GRAILS$/" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -57,13 +57,12 @@
   <component name="FavoritesManager">
     <favorites_list name="lt-xml" />
   </component>
-  <component name="FileColors" enabled="true" enabledForTabs="true" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="XmlUtil.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="XmlUtil.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../src/ltxml/XmlUtil.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="279" column="0" selection-start="10142" selection-end="10142" vertical-scroll-proportion="0.5006878">
+            <state line="213" column="56" selection-start="7441" selection-end="7441" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -72,13 +71,45 @@
       <file leaf-file-name="XmlUtilTest.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../test/ltxml/XmlUtilTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="30" column="61" selection-start="1257" selection-end="1257" vertical-scroll-proportion="0.0">
+            <state line="306" column="28" selection-start="9191" selection-end="9191" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="test.xsd" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../test/test.xsd">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="155" column="85" selection-start="6496" selection-end="6496" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="olschema-sample.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../tmp/olschema-sample.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="15" column="52" selection-start="671" selection-end="671" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="build.xml" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/../build.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="34" column="0" selection-start="1311" selection-end="1311" vertical-scroll-proportion="0.6694796">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FindManager">
+    <FindUsagesManager>
+      <setting name="OPEN_NEW_TAB" value="false" />
+    </FindUsagesManager>
   </component>
   <component name="Git.Settings">
     <option name="GIT_EXECUTABLE" value="/usr/local/bin/git" />
@@ -87,8 +118,12 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
+        <option value="$PROJECT_DIR$/../build/test-schema/gen-src/com/example/schemas/lt_xml/ListItems.java" />
+        <option value="$PROJECT_DIR$/../tmp/olschema-sample.xml" />
+        <option value="$PROJECT_DIR$/../test/test.xsd" />
         <option value="$PROJECT_DIR$/../test/ltxml/XmlUtilTest.java" />
         <option value="$PROJECT_DIR$/../src/ltxml/XmlUtil.java" />
+        <option value="$PROJECT_DIR$/../build.xml" />
       </list>
     </option>
   </component>
@@ -127,6 +162,8 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Favorites" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -155,64 +192,12 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lt-xml" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lt-xml" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ltxml" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lt-xml" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lt-xml" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ltxml" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lt-xml" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lt-xml" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="build" />
+              <option name="myItemId" value="lib" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Favorites" />
-      <pane id="PackagesPane" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -229,8 +214,8 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="RunManager">
     <configuration default="true" type="Remote" factoryName="Remote">
@@ -242,6 +227,14 @@
       <method>
         <option name="AntTarget" enabled="false" />
         <option name="BuildArtifacts" enabled="false" />
+        <option name="Maven.BeforeRunTask" enabled="false" />
+      </method>
+    </configuration>
+    <configuration default="true" type="FlexUnitRunConfigurationType" factoryName="FlexUnit" adl_options="" air_descriptor_path="" air_program_params="" air_publisher_id="" air_root_dir_path="" air_run_mode="AppDescriptor" browser_family="FIREFOX" class_name="" debugger_sdk="Module SDK" html_or_swf_file_path="" launcher_type="OSDefault" main_class_name="" method_name="" module_name="" output_log_level="" package_name="" player_path="/usr/bin/flashplayer" port="0" run_mode="HtmlOrSwfFile" run_trusted="false" scope="Class" socket_policy_port="0" url_to_launch="http://">
+      <method>
+        <option name="AntTarget" enabled="false" />
+        <option name="BuildArtifacts" enabled="false" />
+        <option name="Make" enabled="true" />
         <option name="Maven.BeforeRunTask" enabled="false" />
       </method>
     </configuration>
@@ -265,7 +258,6 @@
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
       <extension name="coverage" enabled="false" merge="false" />
-      <extension name="snapshooter" />
       <option name="MAIN_CLASS_NAME" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
@@ -286,7 +278,6 @@
     </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
       <extension name="coverage" enabled="false" merge="false" />
-      <extension name="snapshooter" />
       <module name="" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
@@ -303,6 +294,7 @@
         <value defaultName="moduleWithDependencies" />
       </option>
       <envs />
+      <patterns />
       <method>
         <option name="AntTarget" enabled="false" />
         <option name="BuildArtifacts" enabled="false" />
@@ -330,7 +322,7 @@
     <option name="CHECK_NESTED_FOR_QUICK_MERGE" value="false" />
     <option name="IGNORE_SPACES_IN_ANNOTATE" value="true" />
     <option name="SHOW_MERGE_SOURCES_IN_ANNOTATE" value="true" />
-    <configuration useDefault="true">$PROJECT_DIR$/../../../.subversion_IDEA</configuration>
+    <configuration useDefault="true">$USER_HOME$/.subversion_IDEA</configuration>
     <myIsUseDefaultProxy>false</myIsUseDefaultProxy>
     <supportedVersion>125</supportedVersion>
   </component>
@@ -343,7 +335,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1436" y="0" width="1448" height="903" extended-state="6" />
+    <frame x="1440" y="0" width="1440" height="900" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -356,13 +348,13 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.248023" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3065799" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
@@ -379,6 +371,7 @@
     <option name="CHECK_LOCALLY_CHANGED_CONFLICTS_IN_BACKGROUND" value="true" />
     <option name="ENABLE_BACKGROUND_PROCESSES" value="false" />
     <option name="CHANGED_ON_SERVER_INTERVAL" value="60" />
+    <option name="SHOW_ONLY_CHANGED_IN_SELECTION_DIFF" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="LAST_COMMIT_MESSAGE" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
@@ -402,49 +395,41 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../test/ltxml/XmlUtilTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="61" selection-start="1257" selection-end="1257" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="jar:///usr/lib/jvm/java-6-sun-1.6.0.20/jre/lib/rt.jar!/sun/nio/cs/StreamDecoder.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="15" selection-start="1651" selection-end="1651" vertical-scroll-proportion="0.33286518">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///usr/lib/jvm/java-6-sun-1.6.0.20/src.zip!/java/io/InputStreamReader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="150" column="20" selection-start="4561" selection-end="4561" vertical-scroll-proportion="0.71801925">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$PROJECT_DIR$/../lib/runtime/xpp3_min-1.1.4c.jar!/org/xmlpull/mxp1/MXParser.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="28" selection-start="161" selection-end="169" vertical-scroll-proportion="0.10174418">
-          <folding />
-        </state>
+        <state line="5" column="28" selection-start="161" selection-end="169" vertical-scroll-proportion="0.10174418" />
       </provider>
     </entry>
-    <entry file="jar:///usr/lib/jvm/java-6-sun-1.6.0.20/src.zip!/java/lang/StringCoding.java">
+    <entry file="file://$PROJECT_DIR$/../src/ltxml/XmlWriter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="182" column="7" selection-start="5327" selection-end="5327" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///usr/lib/jvm/java-6-sun-1.6.0.20/src.zip!/java/lang/String.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="213" column="27" selection-start="8021" selection-end="8021" vertical-scroll-proportion="2.641854">
-          <folding />
-        </state>
+        <state line="121" column="21" selection-start="3113" selection-end="3113" vertical-scroll-proportion="0.33287293" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../src/ltxml/XmlUtil.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="279" column="0" selection-start="10142" selection-end="10142" vertical-scroll-proportion="0.5006878">
+        <state line="213" column="56" selection-start="7441" selection-end="7441" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../test/ltxml/XmlUtilTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="306" column="28" selection-start="9191" selection-end="9191" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../test/test.xsd">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="155" column="85" selection-start="6496" selection-end="6496" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../tmp/olschema-sample.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="52" selection-start="671" selection-end="671" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../build.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="34" column="0" selection-start="1311" selection-end="1311" vertical-scroll-proportion="0.6694796">
           <folding />
         </state>
       </provider>
