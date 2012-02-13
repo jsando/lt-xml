@@ -163,6 +163,15 @@ public final class XmlWriter {
         return this;
     }
 
+    public XmlWriter addRawText (String text) throws IOException {
+        if (_inStartTag) {
+            _out.write ('>');
+            _inStartTag = false;
+        }
+        _out.write(text);
+        return this;
+    }
+
     /**
      * Escape embedded quotes, ampersands, and angle brackets.
      *
