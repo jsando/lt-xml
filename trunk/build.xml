@@ -44,7 +44,19 @@
             <schema dir="test" includes="*.xsd"/>
             <produces dir="build/test-schema/gen-src" includes="**/*.java" />
         </xjc>
-        <javac source="1.6" target="1.6" debug="on" srcdir="build/test-schema/gen-src" destdir="build/test-schema/classes" includeantruntime="false"/>
+
+        <replace dir="build/test-schema/gen-src" token="@XmlElement" value="@ltxml.LtXmlElement">
+            <include name="**/*.java"/>
+        </replace>
+        <echo file="build/test-schema/gen-src/com/example/schemas/lt_xml/package-info.java">
+            @ltxml.LtXmlSchema(namespace="http://schemas.example.com/lt-xml")
+            package com.example.schemas.lt_xml;
+        </echo>
+
+        <javac source="1.6" target="1.6" debug="on" srcdir="build/test-schema/gen-src"
+               destdir="build/test-schema/classes" includeantruntime="false">
+            <classpath location="build/lt-xml.jar"/>
+       </javac>
         <jar basedir="build/test-schema/classes" jarfile="build/test-schema.jar"/>
     </target>
 

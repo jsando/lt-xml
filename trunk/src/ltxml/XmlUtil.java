@@ -2,8 +2,7 @@ package ltxml;
 
 import org.xmlpull.mxp1.MXParser;
 
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlSchema;
+
 import javax.xml.datatype.DatatypeFactory;
 import javax.xml.datatype.XMLGregorianCalendar;
 import java.beans.Introspector;
@@ -290,7 +289,7 @@ public class XmlUtil {
         for (Field field : claz.getDeclaredFields()) {
             field.setAccessible(true);
             String tagName = null;
-            XmlElement element = field.getAnnotation(XmlElement.class);
+            LtXmlElement element = field.getAnnotation(LtXmlElement.class);
             if (element != null) {
                 tagName = element.name();
                 if ("##default".equals(tagName))
@@ -359,7 +358,7 @@ public class XmlUtil {
         // TODO: only generate once per pass
         if (tagName != null) {
             xml.startElement(tagName);
-            XmlSchema annotation = claz.getPackage().getAnnotation(XmlSchema.class);
+            LtXmlSchema annotation = claz.getPackage().getAnnotation(LtXmlSchema.class);
             xml.addAttribute("xmlns", annotation.namespace());
         }
 
