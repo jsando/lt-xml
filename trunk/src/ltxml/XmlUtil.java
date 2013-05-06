@@ -3,9 +3,7 @@ package ltxml;
 import org.xmlpull.mxp1.MXParser;
 
 
-import javax.xml.datatype.DatatypeFactory;
 import javax.xml.datatype.XMLGregorianCalendar;
-import java.beans.Introspector;
 import java.io.ByteArrayInputStream;
 import java.io.FileReader;
 import java.io.IOException;
@@ -211,7 +209,7 @@ public class XmlUtil {
                             rval = Boolean.valueOf(value);
                     } else if (fieldType.equals(XMLGregorianCalendar.class)) {
                         if (value != null)
-                            rval = DatatypeFactory.newInstance().newXMLGregorianCalendar(value);
+                            rval = new SimpleXmlGregorianCalendar(value);
                     } else if (fieldType.isEnum()) {
                         if (value != null) {
                             Method fromValueString = fieldType.getDeclaredMethod("fromValue", String.class);
