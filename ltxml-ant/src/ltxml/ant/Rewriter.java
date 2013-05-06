@@ -46,10 +46,15 @@ public class Rewriter {
                 InputStream inputStream = zipFile.getInputStream(entry);
                 int size = (int) entry.getSize();
                 byte[] bytes = new byte[size];
-                if (inputStream.read(bytes) != size) {
-                    throw new IOException("Invalid read on " + entry.getName());
+                int count = 0;
+                int totalRead = 0;
+                while((count = inputStream.read(bytes, totalRead, bytes.length - totalRead)) > 0) {
+                    totalRead += count;
                 }
                 inputStream.close();
+
+                if (totalRead != size)
+                    throw new IOException("Invalid read on " + entry.getName() + ", expected " + size + " bytes, got " + totalRead);
 
                 ClassReader reader = new ClassReader(bytes);
                 ClassWriter writer = new ClassWriter(reader, 0);

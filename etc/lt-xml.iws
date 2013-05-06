@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1863f152-9598-4fea-8bca-0ade4c29a0b0" name="Default" comment="" />
+    <list default="true" id="1863f152-9598-4fea-8bca-0ade4c29a0b0" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ltxml-ant/src/ltxml/ant/Rewriter.java" afterPath="$PROJECT_DIR$/../ltxml-ant/src/ltxml/ant/Rewriter.java" />
+    </list>
     <ignored path="$USER_HOME$/.griffon/" />
     <ignored path="$USER_HOME$/.grails/" />
     <file path="/XmlUtil.java" changelist="1863f152-9598-4fea-8bca-0ade4c29a0b0" time="1367864553414" ignored="false" />
@@ -11,7 +13,7 @@
     <file path="$PROJECT_DIR$/../build/junit/TEST-ltxml.XmlUtilTest.xml" changelist="1863f152-9598-4fea-8bca-0ade4c29a0b0" time="1367861406821" ignored="false" />
     <file path="/build.xml" changelist="1863f152-9598-4fea-8bca-0ade4c29a0b0" time="1367876322152" ignored="false" />
     <file path="$PROJECT_DIR$/../build/junit-report/junit-noframes.html" changelist="1863f152-9598-4fea-8bca-0ade4c29a0b0" time="1367864788794" ignored="false" />
-    <file path="/Rewriter.java" changelist="1863f152-9598-4fea-8bca-0ade4c29a0b0" time="1367876179892" ignored="false" />
+    <file path="/Rewriter.java" changelist="1863f152-9598-4fea-8bca-0ade4c29a0b0" time="1367877216217" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,10 +83,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Rewriter.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="Rewriter.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/../ltxml-ant/src/ltxml/ant/Rewriter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="135" column="0" selection-start="6045" selection-end="6045" vertical-scroll-proportion="0.0">
+            <state line="56" column="0" selection-start="2027" selection-end="2027" vertical-scroll-proportion="0.47124824">
               <folding />
             </state>
           </provider>
@@ -135,10 +137,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="build.xml" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="build.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../build.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="66" column="56" selection-start="2827" selection-end="2827" vertical-scroll-proportion="0.8625526">
+            <state line="66" column="56" selection-start="2827" selection-end="2827" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -162,8 +164,8 @@
         <option value="$PROJECT_DIR$/../src/ltxml/LtXmlElement.java" />
         <option value="$PROJECT_DIR$/../src/ltxml/LtXmlSchema.java" />
         <option value="$PROJECT_DIR$/../src/ltxml/XmlUtil.java" />
-        <option value="$PROJECT_DIR$/../ltxml-ant/src/ltxml/ant/Rewriter.java" />
         <option value="$PROJECT_DIR$/../build.xml" />
+        <option value="$PROJECT_DIR$/../ltxml-ant/src/ltxml/ant/Rewriter.java" />
       </list>
     </option>
   </component>
@@ -654,9 +656,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../ltxml-ant/src/ltxml/ant/Rewriter.java">
+    <entry file="file://$PROJECT_DIR$/../build.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="135" column="0" selection-start="6045" selection-end="6045" vertical-scroll-proportion="0.0">
+        <state line="66" column="56" selection-start="2827" selection-end="2827" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -668,9 +670,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../build.xml">
+    <entry file="file://$PROJECT_DIR$/../ltxml-ant/src/ltxml/ant/Rewriter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="66" column="56" selection-start="2827" selection-end="2827" vertical-scroll-proportion="0.8625526">
+        <state line="56" column="0" selection-start="2027" selection-end="2027" vertical-scroll-proportion="0.47124824">
           <folding />
         </state>
       </provider>
