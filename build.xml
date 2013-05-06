@@ -34,9 +34,24 @@
                 <attribute name="Implementation-Version" value="${app.version}"/>
             </manifest>
         </jar>
+
+        <mkdir dir="build/rewriter-classes"/>
+        <javac source = "1.5" target = "1.5" srcdir="ltxml-ant/src" destdir="build/rewriter-classes"
+               optimize="false" debug="true" includeantruntime="false">
+            <classpath>
+                <fileset dir="lib/ant" includes="*.jar"/>
+            </classpath>
+        </javac>
+        <copy todir="build" file="lib/ant/asm-4.1.jar"/>
+        <jar jarfile="build/lt-xml-rewriter.jar" basedir="build/rewriter-classes">
+            <manifest>
+                <attribute name="Main-Class" value="ltxml.ant.Rewriter"/>
+                <attribute name="Class-Path" value="asm-4.1.jar"/>
+            </manifest>
+        </jar>
     </target>
     
-    <target name="test-schema">
+    <target name="test-schema" depends="build">
         <delete dir="build/test-schema"/>
         <mkdir dir="build/test-schema/gen-src"/>
         <mkdir dir="build/test-schema/classes"/>
@@ -44,20 +59,14 @@
             <schema dir="test" includes="*.xsd"/>
             <produces dir="build/test-schema/gen-src" includes="**/*.java" />
         </xjc>
-
-        <replace dir="build/test-schema/gen-src" token="@XmlElement" value="@ltxml.LtXmlElement">
-            <include name="**/*.java"/>
-        </replace>
-        <echo file="build/test-schema/gen-src/com/example/schemas/lt_xml/package-info.java">
-            @ltxml.LtXmlSchema(namespace="http://schemas.example.com/lt-xml")
-            package com.example.schemas.lt_xml;
-        </echo>
-
         <javac source="1.6" target="1.6" debug="on" srcdir="build/test-schema/gen-src"
                destdir="build/test-schema/classes" includeantruntime="false">
             <classpath location="build/lt-xml.jar"/>
        </javac>
         <jar basedir="build/test-schema/classes" jarfile="build/test-schema.jar"/>
+        <java jar="build/lt-xml-rewriter.jar" fork="true">
+            <arg line="build/test-schema.jar"/>
+        </java>
     </target>
 
     <target name="build-test" depends="build,test-schema">

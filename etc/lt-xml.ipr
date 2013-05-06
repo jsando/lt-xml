@@ -179,6 +179,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/lt-xml.iml" filepath="$PROJECT_DIR$/lt-xml.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../ltxml-ant/ltxml-ant.iml" filepath="$PROJECT_DIR$/../ltxml-ant/ltxml-ant.iml" />
     </modules>
   </component>
   <component name="ProjectResources">
@@ -191,10 +192,19 @@
     <option name="mySupportsUserInfoFilter" value="true" />
   </component>
   <component name="VcsDirectoryMappings">
-    <mapping directory="" vcs="" />
+    <mapping directory="$PROJECT_DIR$/../ltxml-ant" vcs="svn" />
   </component>
   <component name="WebServicesPlugin" addRequiredLibraries="true" />
   <component name="libraryTable">
+    <library name="asm-4.1">
+      <CLASSES>
+        <root url="jar://$PROJECT_DIR$/../lib/ant/asm-4.1.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES>
+        <root url="jar://$USER_HOME$/Downloads/asm-4.1/src.zip!/" />
+      </SOURCES>
+    </library>
     <library name="runtime">
       <CLASSES>
         <root url="file://$PROJECT_DIR$/../lib/runtime" />

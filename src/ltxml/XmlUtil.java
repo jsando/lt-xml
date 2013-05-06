@@ -358,7 +358,7 @@ public class XmlUtil {
         // TODO: only generate once per pass
         if (tagName != null) {
             xml.startElement(tagName);
-            LtXmlSchema annotation = claz.getPackage().getAnnotation(LtXmlSchema.class);
+            LtXmlSchema annotation = Class.forName(claz.getPackage().getName() + ".LtXmlNamespace").getAnnotation(LtXmlSchema.class);
             xml.addAttribute("xmlns", annotation.namespace());
         }
 
