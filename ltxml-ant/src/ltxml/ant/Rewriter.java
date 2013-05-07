@@ -35,7 +35,7 @@ public class Rewriter {
         while (entries.hasMoreElements()) {
             final ZipEntry entry = entries.nextElement();
 
-            System.out.println("Processing " + entry.getName() + " ... ");
+            //System.out.println("Processing " + entry.getName() + " ... ");
 
             if (entry.isDirectory()) {
                 ZipEntry copyEntry = new ZipEntry(entry.getName());
@@ -62,7 +62,7 @@ public class Rewriter {
 
                     @Override
                     public AnnotationVisitor visitAnnotation(String s, boolean b) {
-                        System.out.println("  Class Annotation: " + s + " " + b);
+                        //System.out.println("  Class Annotation: " + s + " " + b);
                         if (s.startsWith("Lltxml"))
                             return super.visitAnnotation(s, b);
                         else if (s.equals("Ljavax/xml/bind/annotation/XmlSchema;")) {
@@ -82,11 +82,12 @@ public class Rewriter {
 
                     @Override
                     public FieldVisitor visitField(int access, String name, String desc, String signature, Object value) {
+//                        System.out.println("field sig: '" + signature + "'");
                         FieldVisitor rv = super.visitField(access, name, desc, signature, value);
                         FieldVisitor myv = new FieldVisitor(Opcodes.ASM4, rv) {
                             @Override
                             public AnnotationVisitor visitAnnotation(String desc, boolean visible) {
-                                System.out.println("  Field annotation: " + desc);
+                                //System.out.println("  Field annotation: " + desc);
                                 if (desc.startsWith("Lltxml"))
                                     return super.visitAnnotation(desc, visible);
                                 else if (desc.equals("Ljavax/xml/bind/annotation/XmlElement;")) {
@@ -94,6 +95,8 @@ public class Rewriter {
                                 }
                                 return null;
                             }
+
+
                         };
                         return myv;
                     }
