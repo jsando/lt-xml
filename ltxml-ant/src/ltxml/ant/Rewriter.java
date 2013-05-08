@@ -24,7 +24,8 @@ public class Rewriter {
         File dest = new File(args[0]);
         File original = new File(args[0]);
         File tempFile = File.createTempFile(original.getName(), ".tmp", original.getParentFile());
-        original.renameTo(tempFile);
+        if (!original.renameTo(tempFile))
+            throw new IOException("Failed to rename " + original.getAbsolutePath() + " to " + tempFile.getAbsolutePath());
 
         ZipFile zipFile = new ZipFile(tempFile);
         ZipOutputStream zipOut = new ZipOutputStream(new BufferedOutputStream(new FileOutputStream(dest)));

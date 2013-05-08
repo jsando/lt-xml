@@ -76,7 +76,7 @@ public class XmlUtilTest {
         // BigDecimal
         XMLGregorianCalendar[] values = {null, DatatypeFactory.newInstance().newXMLGregorianCalendar(new GregorianCalendar())};
         for (XMLGregorianCalendar value : values) {
-            obj.setObjectDate(value);
+            obj.setObjectDate(value == null? null: value.toGregorianCalendar().getTimeInMillis());
             verify(obj);
         }
     }
@@ -229,10 +229,10 @@ public class XmlUtilTest {
         AllDataTypesList obj = new AllDataTypesList();
         lazyVerify(obj);
 
-        obj.getObjectDate().add(DatatypeFactory.newInstance().newXMLGregorianCalendar(new GregorianCalendar()));
+        obj.getObjectDate().add(DatatypeFactory.newInstance().newXMLGregorianCalendar(new GregorianCalendar()).toGregorianCalendar().getTimeInMillis());
         lazyVerify(obj);
 
-        obj.getObjectDate().add(DatatypeFactory.newInstance().newXMLGregorianCalendar(new GregorianCalendar()));
+        obj.getObjectDate().add(DatatypeFactory.newInstance().newXMLGregorianCalendar(new GregorianCalendar()).toGregorianCalendar().getTimeInMillis());
         lazyVerify(obj);
     }
 
@@ -323,7 +323,7 @@ public class XmlUtilTest {
         AllDataTypes obj = new AllDataTypes();
         obj.setObjectBigDecimal(new BigDecimal("123.45"));
         obj.setObjectBoolean(Boolean.TRUE);
-        obj.setObjectDate(DatatypeFactory.newInstance().newXMLGregorianCalendar(new GregorianCalendar()));
+        obj.setObjectDate(DatatypeFactory.newInstance().newXMLGregorianCalendar(new GregorianCalendar()).toGregorianCalendar().getTimeInMillis());
         obj.setObjectInteger(1);
         obj.setObjectLong(1l);
         obj.setObjectString("Hello there.");

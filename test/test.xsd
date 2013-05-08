@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
-           xmlns:jxb="http://java.sun.com/xml/ns/jaxb"
-           jxb:version="1.0"
            elementFormDefault="qualified"
            targetNamespace="http://schemas.example.com/lt-xml"
-           xmlns:this="http://schemas.example.com/lt-xml">
+           xmlns:this="http://schemas.example.com/lt-xml"
+           xmlns:jaxb="http://java.sun.com/xml/ns/jaxb"
+           jaxb:version="2.0"
+        >
 
     <xs:complexType name="AbstractBaseType">
         <xs:sequence>
@@ -43,7 +44,7 @@
                         <xs:element name="ObjectBoolean" type="xs:boolean" minOccurs="0"/>
                         <xs:element name="ObjectString" type="xs:string"/>
                         <xs:element name="ObjectBigDecimal" type="xs:decimal"/>
-                        <xs:element name="ObjectDate" type="xs:date"/>
+                        <xs:element name="ObjectDate" type="xs:long" minOccurs="0"/>
                     </xs:sequence>
                 </xs:extension>
             </xs:complexContent>
@@ -103,7 +104,7 @@
                         <xs:element name="ObjectBoolean" type="xs:boolean" maxOccurs="unbounded"/>
                         <xs:element name="ObjectString" type="xs:string" maxOccurs="unbounded"/>
                         <xs:element name="ObjectBigDecimal" type="xs:decimal" maxOccurs="unbounded"/>
-                        <xs:element name="ObjectDate" type="xs:date" maxOccurs="unbounded"/>
+                        <xs:element name="ObjectDate" type="xs:long" maxOccurs="unbounded"/>
                         <xs:element name="ObjectComplexType" type="this:PairOfStrings" maxOccurs="unbounded"/>
                     </xs:sequence>
                 </xs:extension>
