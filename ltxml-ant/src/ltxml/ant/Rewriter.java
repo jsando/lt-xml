@@ -5,6 +5,7 @@ import org.objectweb.asm.ClassReader;
 import org.objectweb.asm.ClassVisitor;
 import org.objectweb.asm.ClassWriter;
 import org.objectweb.asm.FieldVisitor;
+import org.objectweb.asm.MethodVisitor;
 import org.objectweb.asm.Opcodes;
 
 import java.io.BufferedOutputStream;
@@ -83,7 +84,11 @@ public class Rewriter {
 
                     @Override
                     public FieldVisitor visitField(int access, String name, String desc, String signature, Object value) {
-//                        System.out.println("field sig: '" + signature + "'");
+
+                        desc = swapCrappyCalendar(desc);
+                        signature = swapCrappyCalendar(signature);
+
+                        //System.out.println("field desc: " + desc);
                         FieldVisitor rv = super.visitField(access, name, desc, signature, value);
                         FieldVisitor myv = new FieldVisitor(Opcodes.ASM4, rv) {
                             @Override
@@ -101,6 +106,24 @@ public class Rewriter {
                         };
                         return myv;
                     }
+
+                    @Override
+                    public MethodVisitor visitMethod(int access, String name, String desc,
+                                                     String signature, String[] exceptions) {
+                        signature = swapCrappyCalendar(signature);
+                        desc = swapCrappyCalendar(desc);
+                        MethodVisitor smv = super.visitMethod(access, name, desc, signature, exceptions);
+
+                        MethodVisitor mv = new MethodVisitor(Opcodes.ASM4, smv) {
+                            @Override
+                            public void visitFieldInsn(int opcode, String owner, String name, String desc) {
+                                desc = swapCrappyCalendar(desc);
+                                super.visitFieldInsn(opcode, owner, name, desc);
+                            }
+                        };
+                        return mv;
+                    }
+
                 };
                 reader.accept(visitor, 0);
                 byte[] bytes_out = writer.toByteArray();
@@ -147,6 +170,12 @@ public class Rewriter {
 
         zipOut.close();
         tempFile.delete();
+    }
+
+    private static String swapCrappyCalendar(String desc) {
+        if (desc != null)
+            desc = desc.replace("Ljavax/xml/datatype/XMLGregorianCalendar;", "Ljava/util/Date;");
+        return desc;
     }
 
 }
