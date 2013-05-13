@@ -44,7 +44,7 @@
                         <xs:element name="ObjectBoolean" type="xs:boolean" minOccurs="0"/>
                         <xs:element name="ObjectString" type="xs:string"/>
                         <xs:element name="ObjectBigDecimal" type="xs:decimal"/>
-                        <xs:element name="ObjectDate" type="xs:long" minOccurs="0"/>
+                        <xs:element name="ObjectDate" type="xs:dateTime" minOccurs="0"/>
                     </xs:sequence>
                 </xs:extension>
             </xs:complexContent>
@@ -104,7 +104,7 @@
                         <xs:element name="ObjectBoolean" type="xs:boolean" maxOccurs="unbounded"/>
                         <xs:element name="ObjectString" type="xs:string" maxOccurs="unbounded"/>
                         <xs:element name="ObjectBigDecimal" type="xs:decimal" maxOccurs="unbounded"/>
-                        <xs:element name="ObjectDate" type="xs:long" maxOccurs="unbounded"/>
+                        <xs:element name="ObjectDate" type="xs:dateTime" maxOccurs="unbounded"/>
                         <xs:element name="ObjectComplexType" type="this:PairOfStrings" maxOccurs="unbounded"/>
                     </xs:sequence>
                 </xs:extension>

@@ -2,7 +2,6 @@ package ltxml;
 
 import org.xmlpull.mxp1.MXParser;
 
-
 import javax.xml.datatype.XMLGregorianCalendar;
 import java.io.ByteArrayInputStream;
 import java.io.FileReader;
@@ -20,8 +19,13 @@ import java.math.BigDecimal;
 import java.net.URI;
 import java.net.URISyntaxException;
 import java.nio.charset.Charset;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
+import java.util.IllegalFormatException;
 import java.util.List;
+import java.util.TimeZone;
 
 /*
  * Binding XML to Java
@@ -47,6 +51,46 @@ public class XmlUtil {
     private static final Charset UTF_8 = Charset.forName("UTF-8");
 
     private boolean soap;
+
+    private final DateToXsdDatetimeFormatter xmlDateFormat = new DateToXsdDatetimeFormatter();
+
+    private static class DateToXsdDatetimeFormatter {
+
+        private SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSSZ");
+
+        public DateToXsdDatetimeFormatter() {
+        }
+
+        public DateToXsdDatetimeFormatter(TimeZone timeZone) {
+            simpleDateFormat.setTimeZone(timeZone);
+        }
+
+        /**
+         * Parse a xml date string in the format produced by this class only.
+         * This method cannot parse all valid xml date string formats -
+         * so don't try to use it as part of a general xml parser
+         */
+        public synchronized Date parse(String xmlDateTime) throws ParseException {
+            if (xmlDateTime.length() != 29) {
+                throw new ParseException("Date not in expected xml datetime format", 0);
+            }
+
+            StringBuilder sb = new StringBuilder(xmlDateTime);
+            sb.deleteCharAt(26);
+            return simpleDateFormat.parse(sb.toString());
+        }
+
+        public synchronized String format(Date xmlDateTime) throws IllegalFormatException {
+            String s = simpleDateFormat.format(xmlDateTime);
+            StringBuilder sb = new StringBuilder(s);
+            sb.insert(26, ':');
+            return sb.toString();
+        }
+
+        public synchronized void setTimeZone(String timezone) {
+            simpleDateFormat.setTimeZone(TimeZone.getTimeZone(timezone));
+        }
+    }
 
     public XmlUtil(boolean soap) {
         this.soap = soap;
@@ -169,7 +213,7 @@ public class XmlUtil {
                     Field field = resolveField(bean, property);
                     if (field == null)
                         continue;
-                    
+
                     field.setAccessible(true);
                     Class fieldType = field.getType();
 
@@ -215,6 +259,10 @@ public class XmlUtil {
                             Method fromValueString = fieldType.getDeclaredMethod("fromValue", String.class);
                             rval = fromValueString.invoke(null, value);
                         }
+                    } else if (fieldType.equals(byte[].class)) {
+                        rval = Base64.decode(value);
+                    } else if (fieldType.equals(Date.class)) {
+                        rval = xmlDateFormat.parse(value);
                     } else if (!empty) {
                         rval = fieldType.newInstance();
                         bind(parser, name, nameNs, rval, false);
@@ -342,6 +390,10 @@ public class XmlUtil {
         } else if (type.isEnum()) {
             Method valueMethod = type.getDeclaredMethod("value", new Class[]{});
             xmlValue = valueMethod.invoke(value);
+        } else if (type.equals(Date.class)) {
+            xmlValue = xmlDateFormat.format((Date) value);
+        } else if (type.equals(byte[].class)) {
+            xmlValue = Base64.encodeBytes((byte[]) value);
         } else {
             writeObject(value, value.getClass(), null, xml);
         }
@@ -381,7 +433,7 @@ public class XmlUtil {
         XmlWriter xml = new XmlWriter(sw);
         xml.addXmlVersion("1.0", null);
 
-        if(soap) {
+        if (soap) {
             xml.startElement("SOAP-ENV:Envelope");
             xml.addAttribute("xmlns:SOAP-ENV", "http://schemas.xmlsoap.org/soap/envelope/");
             xml.startElement("SOAP-ENV:Header");
