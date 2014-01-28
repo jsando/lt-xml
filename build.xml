@@ -3,7 +3,7 @@
     <property environment="env"/>
     <property name="env.BUILD_NUMBER" value="UNSTABLE"/>
     <property name="build.number" value=".${env.BUILD_NUMBER}"/>
-    <property name="app.version" value="1.0.0${build.number}"/>
+    <property name="app.version" value="5.4${build.number}"/>
 
     <echo message="Building ${ant.project.name} version ${app.version}"/>
 
@@ -126,7 +126,7 @@
 
         <mkdir dir="${dist.home}"/>
         <tar tarfile="${dist.home}/${release.name}.tar.gz" compression="gzip">
-            <tarfileset dir="${build.home}" includes="${ant.project.name}.jar" prefix="${release.name}/lib" preserveleadingslashes="true"/>
+            <tarfileset dir="${build.home}" includes="${ant.project.name}.jar, lt-xml-rewriter.jar" prefix="${release.name}/lib" preserveleadingslashes="true"/>
             <tarfileset dir="${build.home}/api" includes="**" prefix="${release.name}/api" preserveleadingslashes="true"/>
             <tarfileset dir="lib/runtime" includes="**" prefix="${release.name}/lib" preserveleadingslashes="true"/>
         </tar>
