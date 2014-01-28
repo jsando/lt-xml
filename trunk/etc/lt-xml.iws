@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" readonly="true" id="1863f152-9598-4fea-8bca-0ade4c29a0b0" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ltxml-ant/src/ltxml/ant/Rewriter.java" afterPath="$PROJECT_DIR$/../ltxml-ant/src/ltxml/ant/Rewriter.java" />
-    </list>
+    <list default="true" readonly="true" id="1863f152-9598-4fea-8bca-0ade4c29a0b0" name="Default" comment="" />
     <ignored path="$USER_HOME$/.griffon/" />
     <ignored path="$USER_HOME$/.grails/" />
     <file path="/XmlUtil.java" changelist="1863f152-9598-4fea-8bca-0ade4c29a0b0" time="1368486322903" ignored="false" />
@@ -11,7 +9,7 @@
     <file path="/LtXmlSchema.java" changelist="1863f152-9598-4fea-8bca-0ade4c29a0b0" time="1367864593001" ignored="false" />
     <file path="$PROJECT_DIR$/../build/junit/TESTS-TestSuites.xml" changelist="1863f152-9598-4fea-8bca-0ade4c29a0b0" time="1368486036000" ignored="false" />
     <file path="$PROJECT_DIR$/../build/junit/TEST-ltxml.XmlUtilTest.xml" changelist="1863f152-9598-4fea-8bca-0ade4c29a0b0" time="1368486036000" ignored="false" />
-    <file path="/build.xml" changelist="1863f152-9598-4fea-8bca-0ade4c29a0b0" time="1367876322152" ignored="false" />
+    <file path="/build.xml" changelist="1863f152-9598-4fea-8bca-0ade4c29a0b0" time="1390929302850" ignored="false" />
     <file path="$PROJECT_DIR$/../build/junit-report/junit-noframes.html" changelist="1863f152-9598-4fea-8bca-0ade4c29a0b0" time="1367864788794" ignored="false" />
     <file path="/Rewriter.java" changelist="1863f152-9598-4fea-8bca-0ade4c29a0b0" time="1368485978320" ignored="false" />
     <file path="/SimpleXmlGregorianCalendar.java" changelist="1863f152-9598-4fea-8bca-0ade4c29a0b0" time="1367881810414" ignored="false" />
@@ -96,8 +94,15 @@
     <file path="$PROJECT_DIR$/../../pal/5.4/onelink/onelink-commons-java/src/main/java/com/paltronics/onelink/console/LogStreamHandler.java" changelist="1863f152-9598-4fea-8bca-0ade4c29a0b0" time="1367976457720" ignored="false" />
     <file path="/LogStreamHandler.java" changelist="1863f152-9598-4fea-8bca-0ade4c29a0b0" time="1367975731132" ignored="false" />
     <file path="/Base64.java" changelist="1863f152-9598-4fea-8bca-0ade4c29a0b0" time="1368483481799" ignored="false" />
-    <file path="$PROJECT_DIR$/../build/api/index-all.html" changelist="1863f152-9598-4fea-8bca-0ade4c29a0b0" time="1368483736464" ignored="false" />
-    <file path="$PROJECT_DIR$/../build/api/ltxml/XmlUtil.html" changelist="1863f152-9598-4fea-8bca-0ade4c29a0b0" time="1368483736464" ignored="false" />
+    <file path="$PROJECT_DIR$/../build/api/index-all.html" changelist="1863f152-9598-4fea-8bca-0ade4c29a0b0" time="1390929454964" ignored="false" />
+    <file path="$PROJECT_DIR$/../build/api/ltxml/XmlUtil.html" changelist="1863f152-9598-4fea-8bca-0ade4c29a0b0" time="1390929454964" ignored="false" />
+    <file path="$PROJECT_DIR$/../../../pal/5.3/megamic/src/megamic_jar/com/paltronics/megamic/util/TestTicketPrinted.java" changelist="1863f152-9598-4fea-8bca-0ade4c29a0b0" time="1390928406201" ignored="false" />
+    <file path="/TestTicketPrinted.java" changelist="1863f152-9598-4fea-8bca-0ade4c29a0b0" time="1390928406201" ignored="false" />
+    <file path="$PROJECT_DIR$/../../../pal/5.4/megamic/tp53.xml" changelist="1863f152-9598-4fea-8bca-0ade4c29a0b0" time="1390928482825" ignored="false" />
+    <file path="/fragment.java" changelist="1863f152-9598-4fea-8bca-0ade4c29a0b0" time="1390928495138" ignored="false" />
+    <file path="$PROJECT_DIR$/../../../pal/5.4/megamic/src/megamic_jar/com/paltronics/megamic/util/TestTicketPrinted.java" changelist="1863f152-9598-4fea-8bca-0ade4c29a0b0" time="1390928496930" ignored="false" />
+    <file path="$PROJECT_DIR$/../../../pal/5.4/megamic/lib/runtime/paltronics-onelink-schema-v1_0.jar!/com/paltronics/schemas/onelink/v1_0/JackpotHit.class" changelist="1863f152-9598-4fea-8bca-0ade4c29a0b0" time="1390928554300" ignored="false" />
+    <file path="$PROJECT_DIR$/../../../pal/5.4/megamic/tp54.xml" changelist="1863f152-9598-4fea-8bca-0ade4c29a0b0" time="1390928869808" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -112,6 +117,25 @@
     <disable_hints />
   </component>
   <component name="DebuggerManager">
+    <method_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true">
+      <breakpoint url="jar:///Library/Java/JavaVirtualMachines/1.6.0_29-b11-402.jdk/Contents/Home/src.jar!/src/javax/xml/datatype/DatatypeFactory.java" line="733" class="javax.xml.datatype.DatatypeFactory" package="javax.xml.datatype">
+        <option name="WATCH_ENTRY" value="true" />
+        <option name="WATCH_EXIT" value="true" />
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+    </method_breakpoints>
     <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
       <breakpoint>
@@ -149,25 +173,6 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </breakpoint_any>
-    <method_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true">
-      <breakpoint url="jar:///Library/Java/JavaVirtualMachines/1.6.0_29-b11-402.jdk/Contents/Home/src.jar!/src/javax/xml/datatype/DatatypeFactory.java" line="733" class="javax.xml.datatype.DatatypeFactory" package="javax.xml.datatype">
-        <option name="WATCH_ENTRY" value="true" />
-        <option name="WATCH_EXIT" value="true" />
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="REMOVE_AFTER_HIT" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-    </method_breakpoints>
     <breakpoint_rules />
     <ui_properties />
   </component>
@@ -180,7 +185,7 @@
       <file leaf-file-name="XmlUtil.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../src/ltxml/XmlUtil.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="340" column="23" selection-start="12625" selection-end="12625" vertical-scroll-proportion="0.0">
+            <state line="336" column="34" selection-start="12448" selection-end="12448" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -213,6 +218,15 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="XmlWriter.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/../src/ltxml/XmlWriter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="200" column="0" selection-start="5505" selection-end="5505" vertical-scroll-proportion="0.8347107">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="LtXmlElement.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../src/ltxml/LtXmlElement.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -222,10 +236,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Rewriter.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Rewriter.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../ltxml-ant/src/ltxml/ant/Rewriter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="157" column="12" selection-start="7017" selection-end="7017" vertical-scroll-proportion="0.37062937">
+            <state line="157" column="12" selection-start="7017" selection-end="7017" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -243,7 +257,7 @@
       <file leaf-file-name="build.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../build.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="71" column="18" selection-start="2927" selection-end="2927" vertical-scroll-proportion="0.0">
+            <state line="5" column="0" selection-start="203" selection-end="203" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -261,16 +275,16 @@
       <list>
         <option value="$PROJECT_DIR$/../build/test-schema/gen-src/com/example/schemas/lt_xml/ListItems.java" />
         <option value="$PROJECT_DIR$/../tmp/olschema-sample.xml" />
-        <option value="$PROJECT_DIR$/../src/ltxml/XmlWriter.java" />
         <option value="$PROJECT_DIR$/../src/ltxml/LtXmlElement.java" />
         <option value="$PROJECT_DIR$/../src/ltxml/LtXmlSchema.java" />
-        <option value="$PROJECT_DIR$/../build.xml" />
         <option value="$PROJECT_DIR$/../src/ltxml/SimpleXmlGregorianCalendar.java" />
         <option value="$PROJECT_DIR$/../src/ltxml/Base64.java" />
         <option value="$PROJECT_DIR$/../test/test.xsd" />
         <option value="$PROJECT_DIR$/../src/ltxml/XmlUtil.java" />
         <option value="$PROJECT_DIR$/../test/ltxml/XmlUtilTest.java" />
         <option value="$PROJECT_DIR$/../ltxml-ant/src/ltxml/ant/Rewriter.java" />
+        <option value="$PROJECT_DIR$/../build.xml" />
+        <option value="$PROJECT_DIR$/../src/ltxml/XmlWriter.java" />
       </list>
     </option>
   </component>
@@ -316,17 +330,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope">
-        <subPane subId="Project Files">
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -461,19 +464,30 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope">
+        <subPane subId="Project Files">
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="PackagesPane" />
       <pane id="Favorites" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatWidth1" value="90" />
-    <property name="project.structure.last.edited" value="Libraries" />
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatWidth0" value="89" />
+    <property name="project.structure.last.edited" value="Libraries" />
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatWidth3" value="75" />
-    <property name="project.structure.proportion" value="0.15" />
-    <property name="OverrideImplement.combined" value="true" />
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatWidth2" value="100" />
-    <property name="options.splitter.main.proportions" value="0.3" />
+    <property name="OverrideImplement.combined" value="true" />
+    <property name="project.structure.proportion" value="0.15" />
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatOrder1" value="1" />
+    <property name="options.splitter.main.proportions" value="0.3" />
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatOrder0" value="0" />
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatOrder3" value="3" />
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatOrder2" value="2" />
@@ -491,19 +505,19 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatWidth4" value="122" />
-    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatWidth5" value="888" />
     <property name="GoToClass.includeLibraries" value="false" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatWidth5" value="888" />
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="GoToFile.includeJavaFiles" value="false" />
-    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeOrder5" value="5" />
     <property name="options.lastSelected" value="preferences.general" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeOrder5" value="5" />
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeOrder3" value="3" />
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeOrder4" value="4" />
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeOrder1" value="1" />
-    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeOrder2" value="2" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeOrder0" value="0" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeOrder2" value="2" />
     <property name="MemberChooser.copyJavadoc" value="false" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeOrder0" value="0" />
     <property name="options.searchVisible" value="true" />
   </component>
   <component name="RunManager">
@@ -654,7 +668,7 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3055954" sideWeight="0.67008984" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2374462" sideWeight="0.67008984" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -733,6 +747,13 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/../build.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="71" column="18" selection-start="2927" selection-end="2927" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="jar:///Library/Java/JavaVirtualMachines/1.6.0_29-b11-402.jdk/Contents/Home/src.jar!/src/com/sun/org/apache/xerces/internal/jaxp/datatype/DatatypeFactoryImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="531" column="36" selection-start="25807" selection-end="25807" vertical-scroll-proportion="0.0" />
@@ -757,13 +778,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../src/ltxml/XmlWriter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="192" column="56" selection-start="5326" selection-end="5326" vertical-scroll-proportion="0.6703297">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../src/ltxml/Base64.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="6" column="0" selection-start="106" selection-end="106" vertical-scroll-proportion="0.0">
@@ -780,30 +794,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/../build/test-schema/classes/com/example/schemas/lt_xml/AllDataTypes.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="66" column="16" selection-start="3030" selection-end="3030" vertical-scroll-proportion="0.884058">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../build.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="71" column="18" selection-start="2927" selection-end="2927" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="66" column="16" selection-start="3030" selection-end="3030" vertical-scroll-proportion="0.884058" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../build/test-schema/classes/com/example/schemas/lt_xml/AllDataTypesList.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="68" selection-start="1292" selection-end="1292" vertical-scroll-proportion="0.41304347">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/Downloads/asm-4.1/src.zip!/org/objectweb/asm/ClassVisitor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="234" column="24" selection-start="9370" selection-end="9370" vertical-scroll-proportion="0.51785713">
-          <folding />
-        </state>
+        <state line="19" column="68" selection-start="1292" selection-end="1292" vertical-scroll-proportion="0.41304347" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../src/ltxml/SimpleXmlGregorianCalendar.java">
@@ -820,13 +816,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../src/ltxml/XmlUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="340" column="23" selection-start="12625" selection-end="12625" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../test/ltxml/XmlUtilTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="340" column="63" selection-start="10479" selection-end="10479" vertical-scroll-proportion="0.0">
@@ -836,7 +825,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/../ltxml-ant/src/ltxml/ant/Rewriter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="157" column="12" selection-start="7017" selection-end="7017" vertical-scroll-proportion="0.37062937">
+        <state line="157" column="12" selection-start="7017" selection-end="7017" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../build.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="0" selection-start="203" selection-end="203" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../src/ltxml/XmlUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="336" column="34" selection-start="12448" selection-end="12448" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../src/ltxml/XmlWriter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="200" column="0" selection-start="5505" selection-end="5505" vertical-scroll-proportion="0.8347107">
           <folding />
         </state>
       </provider>
