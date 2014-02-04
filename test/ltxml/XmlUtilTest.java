@@ -80,6 +80,17 @@ public class XmlUtilTest {
             obj.setObjectDate(value == null? null: new Date(value.toGregorianCalendar().getTimeInMillis()));
             verify(obj);
         }
+
+        obj.setObjectDate2(new Date());
+        verify(obj);
+
+        String xml = "<?xml version=\"1.0\" ?><SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\"><SOAP-ENV:Header/><SOAP-ENV:Body><AllDataTypes xmlns=\"http://schemas.example.com/lt-xml\"><Timestamp>0</Timestamp><PrimitiveInt>1</PrimitiveInt><PrimitiveLong>1</PrimitiveLong><PrimitiveBoolean>false</PrimitiveBoolean><ObjectInteger>1</ObjectInteger><ObjectLong>1</ObjectLong><ObjectBoolean>true</ObjectBoolean><ObjectString>Hello there.</ObjectString><ObjectBigDecimal>123.45</ObjectBigDecimal><ObjectDate>2014-02-04T08:03:34.089-08:00</ObjectDate><ObjectDate2>2014-02-04</ObjectDate2></AllDataTypes></SOAP-ENV:Body></SOAP-ENV:Envelope>";
+        AllDataTypes o2 = (AllDataTypes) XmlUtil.unmarshall(xml, true);
+        Date d2 = (Date) o2.getObjectDate2();
+        assertEquals(114, d2.getYear());
+        assertEquals(1, d2.getMonth());
+        assertEquals(4, d2.getDate());
+
     }
 
     @Test

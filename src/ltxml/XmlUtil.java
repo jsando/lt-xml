@@ -56,13 +56,14 @@ public class XmlUtil {
 
     private static class DateToXsdDatetimeFormatter {
 
-        private SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSSZ");
+        private SimpleDateFormat dateTimeFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSSZ");
+        private SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
 
         public DateToXsdDatetimeFormatter() {
         }
 
         public DateToXsdDatetimeFormatter(TimeZone timeZone) {
-            simpleDateFormat.setTimeZone(timeZone);
+            dateTimeFormat.setTimeZone(timeZone);
         }
 
         /**
@@ -71,24 +72,25 @@ public class XmlUtil {
          * so don't try to use it as part of a general xml parser
          */
         public synchronized Date parse(String xmlDateTime) throws ParseException {
-            if (xmlDateTime.length() != 29) {
-                throw new ParseException("Date not in expected xml datetime format", 0);
+            if (xmlDateTime.length() == 10) {
+                return dateFormat.parse(xmlDateTime);
+            } else if (xmlDateTime.length() == 29) {
+                StringBuilder sb = new StringBuilder(xmlDateTime);
+                sb.deleteCharAt(26);
+                return dateTimeFormat.parse(sb.toString());
             }
-
-            StringBuilder sb = new StringBuilder(xmlDateTime);
-            sb.deleteCharAt(26);
-            return simpleDateFormat.parse(sb.toString());
+            throw new ParseException("Element not in expected xml date or datetime format", 0);
         }
 
         public synchronized String format(Date xmlDateTime) throws IllegalFormatException {
-            String s = simpleDateFormat.format(xmlDateTime);
+            String s = dateTimeFormat.format(xmlDateTime);
             StringBuilder sb = new StringBuilder(s);
             sb.insert(26, ':');
             return sb.toString();
         }
 
         public synchronized void setTimeZone(String timezone) {
-            simpleDateFormat.setTimeZone(TimeZone.getTimeZone(timezone));
+            dateTimeFormat.setTimeZone(TimeZone.getTimeZone(timezone));
         }
     }
 

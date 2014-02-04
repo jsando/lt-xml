@@ -45,6 +45,7 @@
                         <xs:element name="ObjectString" type="xs:string"/>
                         <xs:element name="ObjectBigDecimal" type="xs:decimal"/>
                         <xs:element name="ObjectDate" type="xs:dateTime" minOccurs="0"/>
+                        <xs:element name="ObjectDate2" type="xs:date" minOccurs="0"/>
                     </xs:sequence>
                 </xs:extension>
             </xs:complexContent>
