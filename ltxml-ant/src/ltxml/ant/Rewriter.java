@@ -25,8 +25,9 @@ public class Rewriter {
         File dest = new File(args[0]);
         File original = new File(args[0]);
         File tempFile = File.createTempFile(original.getName(), ".tmp", original.getParentFile());
+        tempFile.delete();
         if (!original.renameTo(tempFile))
-            throw new IOException("Failed to rename " + original.getAbsolutePath() + " to " + tempFile.getAbsolutePath());
+            throw new IOException("Failed to rename " + original.getAbsolutePath() + " to " + tempFile.getAbsolutePath() + " new file exists? " + tempFile.exists());
 
         ZipFile zipFile = new ZipFile(tempFile);
         ZipOutputStream zipOut = new ZipOutputStream(new BufferedOutputStream(new FileOutputStream(dest)));
@@ -154,7 +155,7 @@ public class Rewriter {
         }
 
         if (ns[0] != null) {
-            String pkg = new File(ns[1]).getParentFile().getPath();
+            String pkg = new File(ns[1]).getParentFile().getPath().replace('\\', '/'); // in case running on windows
             System.out.println("Namespace: " + ns[0] + ", package: " + pkg);
             ClassWriter cw = new ClassWriter(0);
             cw.visit(Opcodes.V1_5, Opcodes.ACC_PUBLIC, pkg + "/LtXmlNamespace", null, "java/lang/Object", new String[]{});
